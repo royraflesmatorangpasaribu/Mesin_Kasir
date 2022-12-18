@@ -20,10 +20,9 @@ public class BarangModel {
     public BarangModel() {
         this.CONN = DBHelper.getConnection();
     }
-    //addBarang
+    
     public void addBarangSQL(Barang brg){
         String insert = "INSERT INTO barang VALUES ('" + brg.getNama_produk() + "', " + brg.getHarga() + ", " + brg.getJumlah() + ", " + brg.getDiskon() + ", null, '" + brg.getBarcode() + "', '" + brg.getExpired() + "');";
-//        System.out.println(insert);
         try {
             if(CONN.createStatement().executeUpdate(insert)>0){
                 System.out.println("Berhasil Memasukkan Data");
