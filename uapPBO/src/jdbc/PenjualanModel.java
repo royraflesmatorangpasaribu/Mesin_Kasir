@@ -28,7 +28,6 @@ public class PenjualanModel {
     
     public void addPenjualan(Penjualan pjl){
         String insert = "INSERT INTO pjl VALUES ('" + pjl.getListProduk() + "', " + pjl.getJumlahProduk() + ", " + pjl.getStok() + ");";
-//        System.out.println(insert);
         try {
             if(CONN.createStatement().executeUpdate(insert)>0){
                 System.out.println("Berhasil Memasukkan Data");
