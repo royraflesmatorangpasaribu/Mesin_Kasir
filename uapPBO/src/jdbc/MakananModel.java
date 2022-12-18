@@ -25,10 +25,9 @@ public class MakananModel {
     public MakananModel() {
         this.CONN = DBHelper.getConnection();
     }
-    //addMakanan
+    
     public void addMakananSQL(Makanan mkn){
         String insert = "INSERT INTO makanan VALUES ('" + mkn.getNama_produk() + "', " + mkn.getHarga() + ", " + mkn.getJumlah() + ", " + mkn.getDiskon() + ", null, '" + mkn.getDaya_tahan() + "');";
-//        System.out.println(insert);
         try {
             if(CONN.createStatement().executeUpdate(insert)>0){
                 System.out.println("Berhasil Memasukkan Data");
