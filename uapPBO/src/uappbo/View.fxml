@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="477.0" prefWidth="662.0" style="-fx-background-color: #c3e7ff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uappbo.ViewController">
+   <children>
+      <TableView fx:id="tabView" layoutX="20.0" layoutY="123.0" prefHeight="291.0" prefWidth="621.0">
+        <columns>
+          <TableColumn fx:id="tabNama" prefWidth="156.66665077209473" text="Nama" />
+          <TableColumn fx:id="tabHarga" prefWidth="88.00004577636719" text="Harga" />
+            <TableColumn fx:id="tabJumlah" prefWidth="92.66668701171875" text="Jumlah" />
+            <TableColumn fx:id="tabDiskon" prefWidth="81.33331298828125" text="Diskon" />
+            <TableColumn fx:id="tabBarcode" prefWidth="101.99996948242188" text="Barcode" />
+            <TableColumn fx:id="tabExpired" prefWidth="101.3333740234375" text="Expired" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnDelete" layoutX="577.0" layoutY="438.0" mnemonicParsing="false" onAction="#removeData" text="Delete" />
+      <Button fx:id="btnBack" layoutX="514.0" layoutY="438.0" mnemonicParsing="false" onAction="#openForm" text="Back" />
+      <Text layoutX="303.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA BARANG " />
+   </children>
+</AnchorPane>
