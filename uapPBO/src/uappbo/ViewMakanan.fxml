@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c3e7ff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="uappbo.ViewMakananController">
+   <children>
+      <TableView fx:id="tabView" layoutX="16.0" layoutY="79.0" prefHeight="260.0" prefWidth="569.0">
+        <columns>
+          <TableColumn fx:id="tabNama" prefWidth="178.0" text="Nama" />
+          <TableColumn fx:id="tabHarga" prefWidth="101.0" text="Harga" />
+            <TableColumn fx:id="tabJumlah" prefWidth="84.0" text="Jumlah" />
+            <TableColumn fx:id="tabDiskon" prefWidth="92.0" text="Diskon" />
+            <TableColumn fx:id="tabExpired" prefWidth="113.0" text="Expired" />
+        </columns>
+      </TableView>
+      <Button fx:id="buy" layoutX="203.0" layoutY="350.0" mnemonicParsing="false" onAction="#openBuy" text="Konfirmasi Pembelian" />
+      <Button fx:id="backBtn" layoutX="14.0" layoutY="350.0" mnemonicParsing="false" onAction="#toMakananList" text="Back" />
+      <Button fx:id="delBtn" layoutX="523.0" layoutY="350.0" mnemonicParsing="false" onAction="#removeData" text="Delete" />
+      <Text layoutX="243.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA MAKANAN" />
+   </children>
+</AnchorPane>
