@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package uappbo;
 
 import db.DBHelper;
@@ -24,6 +29,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 import jdbc.BarangModel;
 import uappbo.Classes.Barang;
 
@@ -34,9 +40,13 @@ import uappbo.Classes.Barang;
  */
 public class ViewController implements Initializable {
 
+
     
     @FXML
     private Button btnBack;
+    
+    @FXML
+    private Button beli;
 
     @FXML
     private Button btnDelete;
@@ -111,9 +121,12 @@ public class ViewController implements Initializable {
     @FXML
     void removeData(ActionEvent event) throws IOException{
         int selectedID = tabView.getSelectionModel().getSelectedIndex();
+
         BarangModel model=new BarangModel();
         model.deleteBarangSQL(tabView.getSelectionModel().getSelectedItem());
-        tabView.getItems().remove(selectedID);
+         tabView.getItems().remove(selectedID);
+         
+         JOptionPane.showMessageDialog(null, "Data Berhasil Di Hapus!!!");
     }
 
     @FXML
@@ -123,4 +136,13 @@ public class ViewController implements Initializable {
         Stage stage = (Stage) btnBack.getScene().getWindow();
         stage.setScene(new Scene(root));
     }
+    
+     @FXML
+    void openForm2(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Struk.fxml"));
+          
+        Stage stage = (Stage) beli.getScene().getWindow();
+        stage.setScene(new Scene(root));
+    }
+    
 }
