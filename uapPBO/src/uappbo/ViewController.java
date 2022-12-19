@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package uappbo;
 
 import db.DBHelper;
@@ -38,7 +33,6 @@ import uappbo.Classes.Barang;
  * @author royraflesmp
  */
 public class ViewController implements Initializable {
-
 
     
     @FXML
@@ -117,23 +111,9 @@ public class ViewController implements Initializable {
     @FXML
     void removeData(ActionEvent event) throws IOException{
         int selectedID = tabView.getSelectionModel().getSelectedIndex();
-//        tabView.getItems().remove(selectedID);
-//        BarangModel model = new BarangModel();
-//        double hrg = Double.parseDouble(tabHarga.getText());
-//        int jml = Integer.parseInt(tabJumlah.getText());
-//        double disc = Double.parseDouble(tabDiskon.getText());
-//                
-//        Barang brg = new Barang(tabNama.getText(), hrg, jml, disc, tabBarcode.getText(), tabExpired.getText());
-//        model.deleteBarangSQL(brg1);
-        
-      //  Barang brg=new Barang(tabView.getSelectionModel().);
         BarangModel model=new BarangModel();
         model.deleteBarangSQL(tabView.getSelectionModel().getSelectedItem());
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("View.fxml"));
-//        Parent root = loader.load();
-//        Stage stage= (Stage) btnDelete.getScene().getWindow();
-//        stage.setScene(new Scene(root));
-         tabView.getItems().remove(selectedID);
+        tabView.getItems().remove(selectedID);
     }
 
     @FXML
