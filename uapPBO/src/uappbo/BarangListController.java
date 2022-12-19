@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package uappbo;
 
 import java.io.IOException;
@@ -29,7 +24,7 @@ import uappbo.Classes.Makanan;
 /**
  * FXML Controller class
  *
- * @author egyve
+ * @author royraflesmp
  */
 public class BarangListController implements Initializable {
     @FXML
@@ -119,6 +114,7 @@ public class BarangListController implements Initializable {
         brg1.add(brg);
         tabelBarang.setItems(brg1);
         model.addBarangSQL(brg);
+        System.out.println(Nama.getText());
     }
 
     @FXML
